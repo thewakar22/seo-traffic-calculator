@@ -33,7 +33,3 @@ I built this tool to help digital marketers, SEO professionals, and website owne
 ## Deployment with GitHub Pages
 
 This tool is built using HTML, CSS, and JavaScript, and it can be hosted for free using GitHub Pages.
-
-1. **Clone the Repository:**  
-   ```bash
-   git clone https://github.com/yourusername/seo-traffic-calculator.git
