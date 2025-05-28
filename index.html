@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEO Traffic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    label, select, input, button {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>SEO Traffic Calculator</h1>
+  
+  <label for="searchVolume">Monthly Search Volume:</label>
+  <input type="number" id="searchVolume" placeholder="Enter search volume" required>
+  
+  <label for="ranking">Select Ranking Position:</label>
+  <select id="ranking">
+    <option value="39.8">1 (39.8% CTR)</option>
+    <option value="18.7">2 (18.7% CTR)</option>
+    <option value="10.2">3 (10.2% CTR)</option>
+    <option value="7.2">4 (7.2% CTR)</option>
+    <option value="5.1">5 (5.1% CTR)</option>
+    <option value="4.4">6 (4.4% CTR)</option>
+    <option value="3.0">7 (3.0% CTR)</option>
+    <option value="2.1">8 (2.1% CTR)</option>
+    <option value="1.9">9 (1.9% CTR)</option>
+    <option value="1.5">10 (1.5% CTR)</option>
+  </select>
+  
+  <button onclick="calculateTraffic()">Calculate Traffic</button>
+  
+  <div class="result" id="result"></div>
+  
+  <script>
+    function calculateTraffic() {
+      var searchVolume = parseFloat(document.getElementById('searchVolume').value);
+      var ctr = parseFloat(document.getElementById('ranking').value);
+      
+      if (isNaN(searchVolume) || searchVolume < 0) {
+        document.getElementById('result').textContent = 'Please enter a valid search volume.';
+        return;
+      }
+      
+      var estimatedTraffic = searchVolume * (ctr / 100);
+      document.getElementById('result').textContent = 'Estimated Traffic: ' + estimatedTraffic.toFixed(0) + ' visits per month';
+    }
+  </script>
+</body>
+</html>
