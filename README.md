@@ -1,4 +1,4 @@
-# SEO Traffic Calculator
+# SEO Keyword Traffic Calculator
 
 The SEO Traffic Calculator is a simple web tool that estimates the monthly visits a keyword may receive on Google. It uses the keyword’s monthly search volume along with position-based click-through rates (CTR) to give an approximate traffic value for different ranking positions.
 
